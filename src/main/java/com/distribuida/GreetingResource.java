@@ -22,18 +22,18 @@ class Message{
     }
 }
 
-    @Path("/personas")
+    @Path("/persona")
     public class GreetingResource {
 
         @GET
-        @Path("/list")
+        @Path("/personas")
         @Produces(MediaType.APPLICATION_JSON)
         public List<Persona> listarPersonas() {
             return Persona.listAll();
         }
 
         @POST
-        @Path("/crear")
+        //@Path("/crear")
         @Consumes(MediaType.APPLICATION_JSON)
         @Transactional
         public Response crearPersona(Persona persona) {
@@ -45,7 +45,7 @@ class Message{
         }
 
         @PUT
-        @Path("/actualizada/{id}")
+        @Path("/{id}")
         @Consumes(MediaType.APPLICATION_JSON)
         @Transactional
         public Response actualizarPersona(@PathParam("id") Integer id, Persona personaActualizada) {
@@ -85,7 +85,7 @@ class Message{
         }
 
         @DELETE
-        @Path("/borrar/{id}")
+        @Path("/{id}")
         @Transactional
         public Response eliminarPersona(@PathParam("id") Long id) {
             Persona persona = Persona.findById(id);
