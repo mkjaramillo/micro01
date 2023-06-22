@@ -24,7 +24,7 @@ class Message{
 
     @Path("/persona")
     public class GreetingResource {
-
+/*
         @GET
         @Path("/personas")
         @Produces(MediaType.APPLICATION_JSON)
@@ -101,6 +101,6 @@ class Message{
                     .entity("Persona borrada exitosamente")
                     .build();
 
-        }
+        }*/
     }
 
