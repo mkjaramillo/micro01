@@ -19,11 +19,8 @@ public class RedisConfig {
     @ApplicationScoped //para llamar al metodo en otra clase
     public RedisClient client(){
         String url=String.format("redis://%s@%s:%d",password,host,port);
-        System.out.println("url redis"+ url);
-
-
+        System.out.println("Connecting...." + url);
         return RedisClient.create(url);
     }
-
 
 }

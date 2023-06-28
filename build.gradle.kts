@@ -24,6 +24,8 @@ dependencies {
     implementation ("io.quarkus:quarkus-config-yaml")
     //implementacion de redis
     implementation("io.lettuce:lettuce-core:6.2.4.RELEASE")
+    //gson
+    implementation("com.google.code.gson:gson:2.8.5")
 
 }
 

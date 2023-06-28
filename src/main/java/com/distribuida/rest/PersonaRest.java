@@ -65,7 +65,7 @@ public class PersonaRest {
 
     public Response obtenerPersonaPorId(@PathParam("id") Long id) {
         logger.debug("consultando persona con el id={}",id);
-        var persona = repo.findByIdOptionalCache(id);
+        var persona = repo.findByIdOptionalCacheAsyn(id);
 
         if (persona == null) {
             return Response.status(Response.Status.NOT_FOUND)
