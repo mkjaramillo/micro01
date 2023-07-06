@@ -22,7 +22,7 @@ public class PersonaRest {
     Logger logger= LoggerFactory.getLogger(PersonaRest.class);
 
     @GET
-    @Path("/personas")
+
     public List<Persona> listarPersonas() {
         return Persona.listAll();
     }
