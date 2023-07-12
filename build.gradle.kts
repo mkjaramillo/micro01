@@ -22,10 +22,17 @@ dependencies {
     implementation ("io.quarkus:quarkus-jdbc-postgresql")
     implementation ("io.quarkus:quarkus-hibernate-orm-panache")
     implementation ("io.quarkus:quarkus-config-yaml")
+
     //implementacion de redis
     implementation("io.lettuce:lettuce-core:6.2.4.RELEASE")
     //gson
     implementation("com.google.code.gson:gson:2.8.5")
+    //javax
+    implementation ("javax.ws.rs:javax.ws.rs-api:2.1.1")
+//resteasy
+   // implementation ("io.quarkus:quarkus-resteasy")
+
+
 
 }
 
